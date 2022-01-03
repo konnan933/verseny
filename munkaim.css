@@ -1,0 +1,123 @@
+@charset "UTF-8";
+body{
+    background-image: url("kepek/hatter.png");
+    background-size: 100%;
+}
+article a{
+    text-decoration: none;
+}
+nav{
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+nav a{
+    color: #fff1e3;
+    text-decoration: none;
+    font-size: 25px;
+    background: #644c37;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+}
+nav a:hover{
+    color: black;
+    transition: 0.5s;
+}
+article{
+    margin: auto;
+}
+footer{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+.grid{
+    margin: 100px 100px 100px 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+
+}
+.grid>article{
+    background: #644c37;;
+    border: none;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0,0.3);
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform .3s;
+    color: #fff1e3;
+}
+.grid>article:hover{
+    transform: translateY(10px);
+    box-shadow: 2px 2px 26px 2px rgba(0,0,0,0,0.3);
+    transition: 0.5s;
+}
+.grid > article img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.text{
+    padding: 0 20px 20px;
+}
+.text h3{
+    text-transform: uppercase;
+}
+.text button{
+    background: #fff1e3;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.text button a{
+    display: block;
+    color: black;
+    width: 100%;
+    background-color: black;
+}
+.text button:hover{
+    color: #fff1e3;
+    background-color: black;
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+@media  screen and (max-width:950px) {
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    nav ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+}
+@media  screen and (max-width:600px) {
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .grid > article{
+        text-align: center;
+    }
+    nav ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}

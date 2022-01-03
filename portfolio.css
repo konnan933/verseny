@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html {
+    height: 100%
+}
+body{
+    background:url(kepek/fekete_Feher.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat:no-repeat ;
+    
+}
+main{
+    display: grid;
+    grid-template-areas:"n n n n"
+                        "ar ar ar ar"
+                        "f f f f" ;
+    margin: auto;
+}
+footer{
+    grid-area: f;
+    margin: auto;
+    clear: both;
+    position: relative;
+    margin-top: 60px;
+}
+table{
+    table-layout: fixed;
+    background-color: rgba(0,0,0, 0.3);
+    opacity: 0,1;
+}
+table h1, h2{
+    color: white;
+}
+td{
+    width: 33%;
+}
+td p{
+    font-size: 20px;
+}
+nav{
+    grid-area: n;
+}
+nav ul{ 
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 50px; 
+    padding-right:50px;
+    border-radius: 25px;
+}
+nav a:hover{
+    color: white;
+    background-color: rgba(0,0,0, 0.5);
+    opacity: 0.5;
+    transition-duration: 0.6s;
+
+}
+article{
+    grid-area: ar;
+    display: grid;
+    grid-template-areas:"td td td" ;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 300px;
+}
+article table{
+    margin: auto;
+    border-collapse:collapse;
+}
+article table td{
+    grid-area: td;
+    color: rgb(238, 232, 232);
+    
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer p{
+    text-align: center;
+    color: white;
+}
+footer i:hover{
+    color: white;
+}
+.email h2{
+    padding-bottom: 100px;
+}
+.email a{
+    text-decoration: none;
+    margin:20px 20px 20px 20px;
+    padding:20px 70px 20px 70px;
+    color: black;
+    background-color: white;
+}
+.email a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    transition-duration: 0.6s;
+}
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .icon{
+    margin: 0 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span{
+    display: block;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span i{
+    line-height: 60px;
+    font-size: 30px;
+}
+.wrapper .icon .tooltip{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip{
+    top: -70px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span{
+    color: #fff;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before{
+  background: #3B5999;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before{
+    background-image: linear-gradient(113.7505707731242deg,rgb(81, 91, 212),rgb(129, 52, 175),rgb(221,42,123),rgb(254,218,119),rgb(245,133,41));
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before{
+  background: #333;
+}
+
+@media screen and (max-width: 1500px) {
+    body{
+        background:url(kepek/fekete_Feher.jpg);
+        background-attachment: fixed;
+        background-size: 175%;
+        background-repeat:no-repeat ;
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    body{
+        background:url(kepek/fekete_Feher_telo.jpg);
+        background-attachment: fixed;
+        background-size: 150%;
+        background-repeat:no-repeat ;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    body{
+        background:url(kepek/fekete_Feher_telo.jpg);
+        background-attachment: fixed;
+        background-size: 140%;
+        background-repeat:no-repeat ;
+    }
+    
+}

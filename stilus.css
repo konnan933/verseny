@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+footer{
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.container a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid rgba(208, 90, 85,1);
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffffff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002) ;
+    transition: 0.5;
+    transition-delay: 0s;
+}
+.container a:hover{
+    transition-delay:1.4s ;
+    color: black;
+    box-shadow: 0 0 10px rgba(208, 90, 85,1),
+                0 0 20px rgba(208, 90, 85,1),
+                0 0 40px rgba(208, 90, 85,1),
+                0 0 80px rgba(208, 90, 85,1),
+                0 0 140px rgba(208, 90, 85,1);
+}
+.container a span{
+    position: relative;
+    z-index: 100;
+}
+.container a:nth-child(2){
+    filter: hue-rotate(250deg);
+}
+.container a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: rgba(208, 90, 85,1);
+    box-shadow: 5px -8px 0 rgba(208, 90, 85,1),
+                5px 8px 0 rgba(208, 90, 85,1);
+    transition: width 0.5s, left 0.5s, height 0.5s,
+                box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.container a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0px 0 rgba(208, 90, 85,1),
+                5px 0px 0 rgba(208, 90, 85,1);
+    transition-delay: 0s,0.5s,1s,1s;
+    
+}
+
+.container a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: rgba(208, 90, 85,1);
+    box-shadow: -5px -8px 0 rgba(208, 90, 85,1),
+                -5px 8px 0 rgba(208, 90, 85,1);
+    transition: width 0.5s, left 0.5s, height 0.5s,
+                box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.container a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0px 0 rgba(208, 90, 85,1),
+                -5px 0px 0 rgba(208, 90, 85,1);
+    transition-delay: 0s,0.5s,1s,1s;
+    
+}
+
+
+header{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    max-width: 100%;
+}
+
+nav{
+    text-align: center;
+}
+nav ul{ 
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(77, 22, 20);
+    font-size: 50px;
+}
+.bg-gradient{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(77, 22, 20),black);
+}
+.wrapper {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000; 
+}
+.txt {
+    color: #ffffff;
+    background:#000000;
+    font-size:180px;
+    font-weight: bold;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+.txt::before {
+    content: 'Dervalics Attila';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+}
+.neon-wrapper {
+    display:inline-flex;
+    filter: brightness(200%);
+    overflow: hidden;
+}
+.gradient{
+    background: linear-gradient(113.7505707731242deg, rgba(208, 90, 85,1) 4.927083333333334%,rgba(49, 18, 64,1) 97.84374999999999%);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    mix-blend-mode: multiply;
+}
+.dodge {
+    background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+    position: absolute;
+    top:-100%;
+    left:-100%;
+    right:0;
+    bottom:0;
+    mix-blend-mode: color-dodge;
+    animation: dodge-area 3s linear infinite;
+}
+
+@keyframes dodge-area {
+    to {
+        transform: translate(50%,50%);
+    }
+}
