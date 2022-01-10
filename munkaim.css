@@ -16,6 +16,9 @@ nav ul{
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
 }
+nav li{
+    margin-top: 30px;
+}
 nav a{
     color: #fff1e3;
     text-decoration: none;

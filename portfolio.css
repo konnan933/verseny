@@ -36,6 +36,7 @@ table h1, h2{
 }
 td{
     width: 33%;
+    
 }
 td p{
     font-size: 20px;
@@ -191,12 +192,23 @@ footer i:hover{
     }
     
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     body{
         background:url(kepek/fekete_Feher_telo.jpg);
         background-attachment: fixed;
         background-size: 150%;
         background-repeat:no-repeat ;
+    }
+    nav ul{ 
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    td{
+        width: auto;
+        display: block;
+        margin: auto;
     }
     
 }
